@@ -12,8 +12,8 @@ class Inflection extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'pluralize' => new \Twig_Filter_Function(__CLASS__.'::pluralize'),
-            'singularize' => new \Twig_Filter_Function(__CLASS__.'::singularize'),
+            new \Twig_SimpleFilter('pluralize', __CLASS__.'::pluralize'),
+            new \Twig_SimpleFilter('singularize', __CLASS__.'::singularize'),
         );
     }
 
